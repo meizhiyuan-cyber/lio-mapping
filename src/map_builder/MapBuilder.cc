@@ -134,11 +134,11 @@ void MapBuilder::SetupRos(ros::NodeHandle &nh) {
 //      ("/imu_trans", 5, &LaserOdometry::ImuTransHandler, this);
 
 
-  odom_aft_mapped_.header.frame_id = "/world";
-  odom_aft_mapped_.child_frame_id = "/aft_4d_mapped";
+  odom_aft_mapped_.header.frame_id = "world";
+  odom_aft_mapped_.child_frame_id = "aft_4d_mapped";
 
-  aft_mapped_trans_.frame_id_ = "/world";
-  aft_mapped_trans_.child_frame_id_ = "/aft_4d_mapped";
+  aft_mapped_trans_.frame_id_ = "world";
+  aft_mapped_trans_.child_frame_id_ = "aft_4d_mapped";
 }
 
 void MapBuilder::PublishMapBuilderResults() {
